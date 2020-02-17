@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link  href="arse.css" rel="stylesheet">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div class="main">
+      <div id="app"></div>
+    </div>
+    <canvas id="glcanvas" width="100vw" height="100vh"></canvas>
+      <!-- built files will be auto injected -->
+    <script type="text/javascript" src="js/patch.js" async></script>
+
+    <script>
+        /**
+         * Called when there was a cables error.
+         * @param {string} errId - ID of the error, e.g. 'NO_WEBGL' or 'NO_WEBAUDIO' 
+         *                         when the browser does not support the used APIs
+         * @param {string} errMsg - The error message
+         */
+        function showError(errId, errMsg) {
+            alert('An error occured: ' + errId + ', ' + errMsg);
+        }
+
+        function patchInitialized() {
+            // You can now access the patch object (CABLES.patch), register variable watchers and so on
+        }
+
+        function patchFinishedLoading() {
+            // The patch is ready now, all assets have been loaded
+        }
+
+        document.addEventListener('CABLES.jsLoaded', function(event) {
+            CABLES.patch = new CABLES.Patch({
+                patch: CABLES.exportedPatch,
+                prefixAssetPath: '',
+                glCanvasId: 'glcanvas',
+                glCanvasResizeToWindow: true,
+                onError: showError,
+                onPatchLoaded: patchInitialized,
+                onFinishedLoading: patchFinishedLoading,
+            });
+        });
+    </script>
   </body>
 </html>
