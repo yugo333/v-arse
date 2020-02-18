@@ -1,40 +1,26 @@
 <template>
   <div id="app">
-    <div id="wrapper">
-      <transition enter-active-class="animated zoomInDown"  appear>
-        <img v-show="show" src="./assets/logo.png">
+    <router-view></router-view>
+    <div class="cntroller">
+      <transition name="home" appear>
+        <router-view name="menuHome"></router-view>
       </transition>
-      <div id="w-the">
-        <transition enter-active-class="animated bounceInLeft"  appear>
-          <h1 class="title2">the</h1>
-        </transition>
-      </div>
-      <transition enter-active-class="animated bounceInRight"  appear>
-        <h1 class="title">VueRyder</h1>
+      <transition name="works" appear>
+        <router-view name="menuWorks"></router-view>
+      </transition>
+      <transition name="about" appear>
+        <router-view name="menuAbout"></router-view>
+      </transition>
+      <transition name="link" appear>
+        <router-view name="menuLink"></router-view>
       </transition>
     </div>
-    <component :is="menuComponent"></component>
-    <component :is="xTime"></component>
+    <router-view name="time"></router-view>
   </div>
 </template>
 
 <script>
-import Menu from "./components/Menu.vue";
-import Time from "./components/Time.vue"
 
-export default {
-  data(){
-    return{
-      show:true,
-      menuComponent:"Menu",
-      xTime:"Time",
-    }
-  },
-  components:{
-    Menu: Menu,
-    Time:Time,
-  }
-};
 </script>
 
 <style scoped>
@@ -42,31 +28,82 @@ export default {
   width: 100%;
   height: 100%;
 }
-#wrapper {
-  color: #2c3e50;
-  margin: 0 auto;
-  width: 320px;
-  padding-top: 40px;
+
+.cntroller{
+  width: 20%;
+  /* height: 400px; */
+  padding: 5%;
+  font-size: 35px;
 }
-.title{
-  color: chartreuse;
-  position: absolute;
-  top: 130px;
-  margin: 0 auto;
-  font-size: 50px;
-  font-family: 'Monoton', cursive;
-  text-shadow: 5px 5px 7px white;
+
+
+/* home */
+.home-enter,                    /*押した時の最初の位置と最後の位置を一括指定できる*/
+.home-leave-to{
+  opacity: 0;
 }
-#w-the{
-  width: 31%;
-  margin: 0 auto;
+.home-enter-active{
+  animation: home 1s;       /*@keyframesの指定*/
+  transition: opacity 2s;       /*オパシティーの設定、animation、transitionは一つずつしかかけない*/
 }
-.title2{
-  color: chartreuse;
-  position: absolute;
-  top: 70px;
-  font-size: 50px;
-  font-family: 'Monoton', cursive;
-  text-shadow: 5px 5px 7px white;
+
+@keyframes home {
+  from{
+    transform: translateX(1000px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+/* works */
+.works-enter,                    /*押した時の最初の位置と最後の位置を一括指定できる*/
+.works-leave-to{
+  opacity: 0;
+}
+.works-enter-active{
+  animation: works 2s;       /*@keyframesの指定*/
+  transition: opacity 2s;       /*オパシティーの設定、animation、transitionは一つずつしかかけない*/
+}
+@keyframes works {
+  from{
+    transform: translateX(1400px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+/* about */
+.about-enter,                    /*押した時の最初の位置と最後の位置を一括指定できる*/
+.about-leave-to{
+  opacity: 0;
+}
+.about-enter-active{
+  animation: about 3s;       /*@keyframesの指定*/
+  transition: opacity 2s;       /*オパシティーの設定、animation、transitionは一つずつしかかけない*/
+}
+@keyframes about {
+  from{
+    transform: translateX(1700px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+/* link */
+.link-enter,                    /*押した時の最初の位置と最後の位置を一括指定できる*/
+.link-leave-to{
+  opacity: 0;
+}
+.link-enter-active{
+  animation: link 4s;       /*@keyframesの指定*/
+  transition: opacity 2s;       /*オパシティーの設定、animation、transitionは一つずつしかかけない*/
+}
+@keyframes link {
+  from{
+    transform: translateX(2000px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }
 </style>
