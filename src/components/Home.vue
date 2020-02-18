@@ -10,7 +10,7 @@
         </transition>
       </div>
       <transition enter-active-class="animated bounceInRight"  appear>
-        <h1 class="title">VueRyder</h1>
+        <h1 class="title">VuePlanet</h1>
       </transition>
     </div>
     <!-- <component :is="menuComponent"></component>
