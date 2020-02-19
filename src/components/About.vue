@@ -42,7 +42,7 @@ export default {
 }
 #titles{
     position: absolute;
-    width: 26em;
+    width: 100%;
     height: 50em;
     bottom: -720px;
     font-size: 350%;
