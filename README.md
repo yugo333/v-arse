@@ -14,7 +14,7 @@ https://vueplanet.netlify.com/
 
 ### 制作環境：
 言語、フレームワーク  
-Vue.js/html/css/canvas 
+Vue.js/html/css/canvas   
 インフラ  
 netlify
 ***
