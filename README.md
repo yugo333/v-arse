@@ -9,3 +9,18 @@ https://vueplanet.netlify.com/
 ***
   
 # :new_moon: Description
+フロントサイドに特化した制作物を作りました。canvasとvue.jsをメインに制作を進め、
+動きのあるアプリケーションに仕上げました。
+
+### 制作環境：
+言語、フレームワーク  
+Vue.js/html/css/canvas 
+インフラ  
+netlify
+***
+  
+# :earth_americas: Link
+- [MyPage](http://www.u5-official.com/)
+- [YouTube](https://www.youtube.com/channel/UChAhO3nKwVdZ5GYMF-HkE1g?view_as=subscriber)
+- [twitter](https://twitter.com/u5musicxit)
+ <img src="https://user-images.githubusercontent.com/58324998/73611924-a7711c00-462a-11ea-8ef9-087403752fab.jpg" width="200">
