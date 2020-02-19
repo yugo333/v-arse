@@ -1,6 +1,6 @@
 <template>
   <div id="menu">
-    <router-link to='#' class="list">Works</router-link>
+    <router-link to='/works' class="list">Works</router-link>
   </div>
 </template>
 

@@ -11,6 +11,8 @@ import MenuLink from './components/MenuLink.vue';
 import MenuWorks from './components/MenuWorks.vue';
 import Time from './components/Time.vue';
 import About from './components/About.vue';
+import Works from './components/Works.vue';
+import Link from './components/Link.vue';
 
 Vue.use(Router)
 
@@ -36,6 +38,24 @@ export default new Router({
       menuLink:MenuLink,
       menuWorks:MenuWorks,
       }
+    },
+    {path:"/works",
+    components:{
+      default:Works,
+      menuHome:MenuHome,
+      menuAbout:MenuAbout,
+      menuLink:MenuLink,
+      menuWorks:MenuWorks,
+    }
+    },
+    {path:"/link",
+    components:{
+      default:Link,
+      menuHome:MenuHome,
+      menuAbout:MenuAbout,
+      menuLink:MenuLink,
+      menuWorks:MenuWorks,
+    }
     },
   ]
 });

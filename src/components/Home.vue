@@ -13,27 +13,17 @@
         <h1 class="title">VuePlanet</h1>
       </transition>
     </div>
-    <!-- <component :is="menuComponent"></component>
-    <component :is="xTime"></component> -->
   </div>
 </template>
 
 <script>
-// import Menu from "./components/Menu.vue";
-// import Time from "./components/Time.v"
 
 export default {
   data(){
     return{
       show:true,
-      // menuComponent:"Menu",
-      // xTime:"Time",
     }
   },
-  // components:{
-  //   Menu: Menu,
-  //   Time:Time,
-  // }
 };
 </script>
 
