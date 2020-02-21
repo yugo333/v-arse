@@ -12,7 +12,7 @@ https://vueplanet.netlify.com/
 フロントサイドに特化した制作物を作りました。canvasとvue.jsをメインに制作を進め、
 動きのあるアプリケーションに仕上げました。
 
-### 制作環境：
+## 制作環境：
 言語、フレームワーク  
 Vue.js/html/css/canvas   
 インフラ  
