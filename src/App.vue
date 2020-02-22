@@ -32,8 +32,10 @@
 
 .cntroller{
   width: 20%;
-  /* height: 400px; */
-  padding: 5%;
+  height: 60vh;
+  /* position: absolute; */
+  /* top: 30vh; */
+  padding-left: 5%;
   font-size: 35px;
 }
 

@@ -22,7 +22,7 @@ height: 30px;
 padding: 35px;
 }
 .list{
-margin-top: 20%;
+/* margin-top: 20%; */
 font-family: 'Orbitron', sans-serif;
 color:springgreen;
 }
